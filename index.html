@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+	<title>ToDo list</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="logo">ToDo</div>
+			<nav class="menu">
+				<ul class="menu__list">
+					<li class="menu__list-item"><a class="menu__list-link current__link active">Текущие задачи</a></li>
+					<li class="menu__list-item"><a class="menu__list-link completed__link ">Выполненные задачи</a></li>
+					<li class="menu__list-item"><a class="menu__list-link trash__link">Удалённые задачи</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container">
+			<div class="current content active">
+				<div class="current__add">
+					<span class="current__add-text">Добавить новую задачу:</span>
+					<img src="media/add.svg" class="current__add-btn">
+				</div>
+				<div class="tasks">
+					<!-- Пример структуры активного задания!!! -->
+					<!-- <div class="task">
+						<div class="task__priority high"></div>
+						<div class="task-text">
+							<p class="task-main">Название задания</p>
+							<p class="task-description">Описание задания</p>
+						</div>
+						<div class="task-btns">
+							<img class="task-edit" src="media/edit.svg"></img>
+							<img class="task-completed" src="media/completed.svg"></img>
+							<img class="task-trash" src="media/trash.svg">
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<div class="completed content">
+				<div class="completed__title">Выполненные задачи :</div>
+				<div class="tasks">
+					<!-- Пример структуры выполненного задания!!! -->
+					<!-- <div class="task completed__task">
+						<div class="task-text">
+							<p class="task-main">Название задания</p>
+							<p class="task-description">Описание задания</p>
+						</div>
+						<div class="task-btns">
+							<img class="task-edit" src="media/editCompleted.svg"></img>
+							<img class="task-trash" src="media/trashCompleted.svg">
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<div class="trash content">
+				<div class="trash__title">Удалённые задачи :</div>
+				<div class="tasks">
+					<!-- Пример структуры удалённого задания!!! -->
+					<!-- <div class="task trash__task">
+						<div class="task-text">
+							<p class="task-main">Название задания</p>
+							<p class="task-description">Описание задания</p>
+						</div>
+						<div class="task-btns">
+							<img class="task-restore" src="media/restore.svg"></img>
+							<img class="task-delete" src="media/delete.svg"></img>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</main>
+	<section class="modal">
+		<form class="form">
+			<p class="form__title">Добавление новой задачи</p>
+			<p class="form__main-text">Название задания* :</p>
+			<textarea class="form__main-field" placeholder="Введите название задания..."></textarea>
+			<p class="form__main-text">Описание задания :</p>
+			<textarea class="form__description-field" placeholder="Введите описание задания..."></textarea>
+			<div class="form__priority-wrapper">
+				<label class="form__main-text label" for="high">Высокий приоритет : </label>
+				<input type="radio" class="form__priority-radio high error" name="radio" id="high">
+			</div>
+			<div class="form__priority-wrapper second">
+				<label class="form__main-text" for="low">Низкий приоритет : </label>
+				<input type="radio" class="form__priority-radio low" name="radio" id="low">
+			</div>
+			<div class="form__buttons">
+				<button type="button" class="form__buttons-btn cancel">Отмена</button>
+				<button type="button" class="form__buttons-btn add__tasks">Добавить</button>
+			</div>
+		</form>
+	</section>
+	<section class="edit-modal">
+		<form class="form">
+			<p class="form__title">Добавление новой задачи</p>
+			<p class="form__main-text">Название задания* :</p>
+			<textarea class="form__main-field" placeholder="Введите название задания..."></textarea>
+			<p class="form__main-text">Описание задания :</p>
+			<textarea class="form__description-field" placeholder="Введите описание задания..."></textarea>
+			<div class="form__priority-wrapper">
+				<label class="form__main-text label" for="high">Высокий приоритет : </label>
+				<input type="radio" class="form__priority-radio high error" name="radio" id="high">
+			</div>
+			<div class="form__priority-wrapper second">
+				<label class="form__main-text" for="low">Низкий приоритет : </label>
+				<input type="radio" class="form__priority-radio low" name="radio" id="low">
+			</div>
+			<div class="form__buttons">
+				<button type="button" class="form__buttons-btn cancel">Отмена</button>
+				<button type="button" class="form__buttons-btn save">Сохранить изменения</button>
+			</div>
+		</form>
+	</section>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
